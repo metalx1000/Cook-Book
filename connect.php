@@ -1,7 +1,7 @@
 <?php
 $host="localhost";
-$user="<user>";
-$pwd="<password>";
+$user="root";
+$pwd="root";
 $db="cookbook";
 // Create connection
 $con=mysqli_connect($host,$user,$pwd,$db);
