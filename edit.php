@@ -1,10 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Bootstrap Example</title>
+  <title>Cook Book</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <style>
+    #alert {
+      top: 0px;
+      position: fixed;
+      width: 100%;
+    }
+  </style>
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
   <script>
@@ -41,12 +49,12 @@
         }
         $("#form1").submit(function(event){
             event.preventDefault();
-            //$("#alert").slideDown( "slow" ).delay( 3000 ).slideUp("slow");
+            $("#alert").slideDown( "slow" ).delay( 3000 ).slideUp("slow");
             $.get( "update.php", $( "#form1" ).serialize() );
         });
-        /*$("#alert").click(function(){
+        $("#alert").click(function(){
             $(this).slideUp("slow");
-        });*/
+        });
         
     });
   </script>
@@ -128,4 +136,10 @@
 
     </div>
   </div>
+
+    <div class="alert alert-info" id="alert" style="display: none">
+        <a href="#" >×</a>
+        <strong>Message:</strong> 
+        Entry Has been submitted!
+    </div>
 </body>
