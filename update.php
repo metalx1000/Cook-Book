@@ -13,7 +13,7 @@ if( mysqli_num_rows($result) > 0) {
 }
 else
 {
-    $sql="INSERT INTO $table (pid) VALUES ('$pid')";
+    $sql="INSERT INTO $db $table (pid) VALUES ('$pid')";
     if (!mysqli_query($con,$sql)) {
       die('Error: ' . mysqli_error($con));
     }
@@ -22,7 +22,7 @@ foreach($_GET as $key => $value) {
     echo 'Current value in $_GET["' . $key . '"] is : ' . $value . '<br>';
     $entry = mysqli_real_escape_string($con, $value);
     //$sql="UPDATE WHERE pid='$pid' $table ($key) VALUES ('$entry')";
-    $sql="UPDATE $table SET $key='$entry' WHERE pid='$pid'";
+    $sql="UPDATE $db $table SET $key='$entry' WHERE pid='$pid'";
     mysqli_query($con,$sql);
     //if (!mysqli_query($con,$sql)) {
     //  die('Error: ' . mysqli_error($con));
