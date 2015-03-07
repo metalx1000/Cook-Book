@@ -40,6 +40,24 @@
         }
     }   
 
+    function get_json(pid){
+        var url="get_json.php?pid=" + pid;
+        $.getJSON( url, function( data ) {
+            $(".form-control").each(function(e){
+                var id=$(this).attr("id");
+                var input=$(this);
+                jQuery.each(data[0], function(i, val) {
+                    if(i == id){
+                        input.val(val);
+                        var text = val;
+                    }
+                });
+                //console.log(data[0].+""+id);
+            });
+        info=data[0];
+        });
+    }
+
     $(document).ready(function(){
         if(getUrlParameter('pid')){
             $("#pid").val(getUrlParameter('pid'));
