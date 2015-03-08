@@ -7,13 +7,13 @@ $_GET = array_map('htmlspecialchars', $_GET);
 date_default_timezone_set('America/New_York');
 $date = date('l jS \of F Y h:i:s A');
 $pid=$_GET['pid'];
-$result = mysqli_query($con,"SELECT * FROM $db $table WHERE pid='$pid' ");
+$result = mysqli_query($con,"SELECT * FROM $table WHERE pid='$pid' ");
 if( mysqli_num_rows($result) > 0) {
     print "updating...";
 }
 else
 {
-    $sql="INSERT INTO $db $table (pid) VALUES ('$pid')";
+    $sql="INSERT INTO $table (pid) VALUES ('$pid')";
     if (!mysqli_query($con,$sql)) {
       die('Error: ' . mysqli_error($con));
     }
@@ -22,7 +22,7 @@ foreach($_GET as $key => $value) {
     echo 'Current value in $_GET["' . $key . '"] is : ' . $value . '<br>';
     $entry = mysqli_real_escape_string($con, $value);
     //$sql="UPDATE WHERE pid='$pid' $table ($key) VALUES ('$entry')";
-    $sql="UPDATE $db $table SET $key='$entry' WHERE pid='$pid'";
+    $sql="UPDATE $table SET $key='$entry' WHERE pid='$pid'";
     mysqli_query($con,$sql);
     //if (!mysqli_query($con,$sql)) {
     //  die('Error: ' . mysqli_error($con));
