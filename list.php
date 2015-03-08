@@ -27,6 +27,13 @@
       width:80%;
       margin-left: auto;
       margin-right: auto;
+      padding: 1em;
+    }
+    input{
+      width:100%;
+      margin-bottom: 10px;
+      font-size: 200%;
+
     }
   </style>
 
@@ -38,23 +45,43 @@
       var url="get_all_json.php";
       $.getJSON( url, function( data ) {
           for(var i=0;i<data.length;i++){
-            $("#main").append($("<a>").append($("<div>")
-                .attr("id", data[i].pid)
+            $("#results").append($("<div>")
                 .addClass('item')
-                .text(data[i].title))
-              .attr("href", "edit.php?pid=" + data[i].pid)
-              .addClass('title')
+                .attr("ingredients", data[i].ingredients)
+                .attr("id", data[i].pid)
+                .attr("pid", data[i].pid)
             );
-                     
+
+            $("#" + data[i].pid).append($("<div>")
+                .text(data[i].title)
+                .addClass('title')
+            )
+
+            $("#" + data[i].pid).append($("<div>")
+              .attr("ingredients", data[i].ingredients)
+              .text(data[i].ingredients) 
+            )                     
           }
-        
+      });
+
+      $("#search").keyup(function(){
+        var v=$(this).val();
+        $(".item").hide();
+        $( ".item:contains('"+v+"')" ).show();
+        console.log(v);
+      });
+  
+      $("#results").on('click','.item',function(){
+        var pid = $(this).attr("pid");
+        window.location.href = "edit.php?pid=" + pid;
       });
     });
   </script>
 </head>
 <body>
   <div id="main">
-
+    <input id="search" type="text" placeholder="Enter Search"/>
+    <div id="results"></div>
   </div>
 </body>
 </html>
