@@ -28,7 +28,7 @@ if($count > 0){
     }
     $result = mysqli_query($con,"SELECT * FROM $db $table WHERE $where_clause ORDER BY pid DESC LIMIT 0, 100");
 }else{
-    $result = mysqli_query($con,"SELECT * $db FROM $table ORDER BY pid DESC LIMIT 0, 100");
+    $result = mysqli_query($con,"SELECT * FROM $db $table ORDER BY pid DESC LIMIT 0, 100");
 }
 $rows = array();
 while($row = mysqli_fetch_array($result)) {
