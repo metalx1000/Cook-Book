@@ -109,24 +109,20 @@
 
         <div class="form-group">
           <label for="description">Description:</label>
-          <textarea cols="40" class="form-control" id="description" name="description" rows="10">
-          </textarea>
+          <textarea cols="40" class="form-control" id="description" name="description" rows="10"></textarea>
         </div>
         <div class="form-group">
           <label for="ingredients">Ingredients:</label>
-          <textarea cols="40" class="form-control" id="ingredients" name="ingredients" rows="10">
-          </textarea>
+          <textarea cols="40" class="form-control" id="ingredients" name="ingredients" rows="10"></textarea>
         </div>
         <div class="form-group">
           <label for="instructions">Instructions:</label>
-          <textarea cols="40" class="form-control" id="instructions" name="instructions" rows="10">
-          </textarea>
+          <textarea cols="40" class="form-control" id="instructions" name="instructions" rows="10"></textarea>
         </div>
 
         <div class="form-group">
           <label for="comments">Comments:</label>
-          <textarea cols="40" class="form-control" id="comments" name="comments" rows="10">
-          </textarea>
+          <textarea cols="40" class="form-control" id="comments" name="comments" rows="10"></textarea>
         </div>
 
         <div class="form-group">

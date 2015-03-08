@@ -10,13 +10,15 @@
       position: fixed;
       width: 100%;
     }
+    .title{
+      font-weight: bold;
+      font-size: 200%;
+    }
     .item{
       background-color: red;
       /*height: 20px;
       margin: 10px;
       padding: 20px;*/
-      font-weight: bold;
-      font-size: 200%;
       color: #fff;
       padding: 1em;
       margin-bottom: 0.25em;
@@ -41,6 +43,7 @@
                 .addClass('item')
                 .text(data[i].title))
               .attr("href", "edit.php?pid=" + data[i].pid)
+              .addClass('title')
             );
                      
           }

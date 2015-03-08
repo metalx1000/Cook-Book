@@ -7,7 +7,7 @@ $_GET = array_map('htmlspecialchars', $_GET);
 date_default_timezone_set('America/New_York');
 $date = date('l jS \of F Y h:i:s A');
 $pid=$_GET['pid'];
-$result = mysqli_query($con,"SELECT * FROM $table WHERE pid='$pid' ");
+$result = mysqli_query($con,"SELECT * FROM $db $table WHERE pid='$pid' ");
 if( mysqli_num_rows($result) > 0) {
     print "updating...";
 }
