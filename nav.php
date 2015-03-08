@@ -15,6 +15,7 @@
             <li class="active"><a href="index.php">Home</a></li>
             <li><a href="https://github.com/metalx1000/Cook-Book" target="_blank">Project Page</a></li>
             <li><a href="http://filmsbykris.com" target="_blank">Contact</a></li>
+            <li><a href="edit.php">New Recipe</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
