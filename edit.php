@@ -43,6 +43,7 @@
     function get_json(pid){
         var url="get_json.php?pid=" + pid;
         $.getJSON( url, function( data ) {
+            data=data.replace(/&quot;/g,'"');
             $(".form-control").each(function(e){
                 var id=$(this).attr("id");
                 var input=$(this);
