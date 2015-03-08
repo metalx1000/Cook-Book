@@ -6,7 +6,7 @@ $_POST = array_map('htmlspecialchars', $_POST);
 //date format and time zone
 date_default_timezone_set('America/New_York');
 $date = date('l jS \of F Y h:i:s A');
-$pid=$_GET['pid'];
+$pid=$_POST['pid'];
 $result = mysqli_query($con,"SELECT * FROM $table WHERE pid='$pid' ");
 if( mysqli_num_rows($result) > 0) {
     print "updating...";
@@ -18,8 +18,8 @@ else
       die('Error: ' . mysqli_error($con));
     }
 }
-foreach($_GET as $key => $value) {
-    echo 'Current value in $_GET["' . $key . '"] is : ' . $value . '<br>';
+foreach($_POST as $key => $value) {
+    echo 'Current value in $_POST["' . $key . '"] is : ' . $value . '<br>';
     $entry = mysqli_real_escape_string($con, $value);
     //$sql="UPDATE WHERE pid='$pid' $table ($key) VALUES ('$entry')";
     $sql="UPDATE $table SET $key='$entry' WHERE pid='$pid'";
