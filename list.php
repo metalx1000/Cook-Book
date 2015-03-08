@@ -52,23 +52,29 @@
                 .attr("pid", data[i].pid)
             );
 
+            //title
             $("#" + data[i].pid).append($("<div>")
-                .text(data[i].title)
+                .text(data[i].title.toUpperCase())
                 .addClass('title')
             )
-
+  
+            //ingredients
             $("#" + data[i].pid).append($("<div>")
               .attr("ingredients", data[i].ingredients)
-              .text(data[i].ingredients) 
-            )                     
+              .text(data[i].ingredients.toUpperCase()) 
+            )
+
+            //tags
+            $("#" + data[i].pid).append($("<div>")
+              .text(data[i].tags.toUpperCase()) 
+            )
           }
       });
 
       $("#search").keyup(function(){
-        var v=$(this).val();
+        var v=$(this).val().toUpperCase();
         $(".item").hide();
         $( ".item:contains('"+v+"')" ).show();
-        console.log(v);
       });
   
       $("#results").on('click','.item',function(){

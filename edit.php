@@ -144,6 +144,10 @@
           <input type="text" class="form-control" id="source" name="source" placeholder="Enter who or where you got this recipe from">
         </div>
 
+        <div class="form-group">
+          <label for="tags">Tags:</label>
+          <input type="text" class="form-control" id="tags" name="tags" placeholder="Enter Some Keywords">
+        </div>
 
         <button type="submit" class="btn btn-default">Submit</button>
       </form>
