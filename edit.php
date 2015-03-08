@@ -68,7 +68,7 @@
         $("#form1").submit(function(event){
             event.preventDefault();
             $("#alert").slideDown( "slow" ).delay( 3000 ).slideUp("slow");
-            $.get( "update.php", $( "#form1" ).serialize() );
+            $.post( "update.php", $( "#form1" ).serialize() );
         });
         $("#alert").click(function(){
             $(this).slideUp("slow");
