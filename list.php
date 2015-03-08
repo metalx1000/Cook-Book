@@ -81,11 +81,19 @@
         var pid = $(this).attr("pid");
         window.location.href = "edit.php?pid=" + pid;
       });
+
+      $("#new").click(function(){
+        window.location.href = "edit.php";
+      });
+
     });
   </script>
 </head>
 <body>
   <div id="main">
+    <div id="header">
+      <button id="new">NEW</button>
+    </div>
     <input id="search" type="text" placeholder="Enter Search"/>
     <div id="results"></div>
   </div>
