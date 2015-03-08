@@ -24,7 +24,7 @@
       margin-bottom: 0.25em;
     }
     body{
-      width:80%;
+      /*width:80%;*/
       margin-left: auto;
       margin-right: auto;
       padding: 1em;
