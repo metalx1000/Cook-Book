@@ -39,15 +39,16 @@
             }
         }
     }   
-
+    var gg;
     function get_json(pid){
         var url="get_json.php?pid=" + pid;
         $.getJSON( url, function( data ) {
-//            data=data.replace(/&quot;/g,'"');
+//            data.replace(/&quot;/g,'"');
             $(".form-control").each(function(e){
                 var id=$(this).attr("id");
                 var input=$(this);
                 jQuery.each(data[0], function(i, val) {
+                    val=val.replace(/&quot;/g,'"');
                     if(i == id){
                         input.val(val);
                         var text = val;
