@@ -15,13 +15,37 @@
       font-size: 200%;
     }
     .item{
-      background-color: red;
+      background-color: grey;
       /*height: 20px;
       margin: 10px;
       padding: 20px;*/
       color: #fff;
       padding: 1em;
       margin-bottom: 0.25em;
+    }
+    .dinner{
+      background-color: red;
+    }
+    .breakfast{
+      background-color: pink;
+    }
+    .lunch{
+      background-color: orange;
+    }
+    .dessert{
+      background-color: lightblue;
+    }
+    .appetizer{
+      background-color: GreenYellow ;
+    }
+    .snack{
+      background-color: MediumOrchid ;
+    }
+    .soup{
+      background-color: gold;
+    }
+    .salad{
+      background-color: green;
     }
     body{
       /*width:80%;*/
@@ -47,6 +71,7 @@
           for(var i=0;i<data.length;i++){
             $("#results").append($("<div>")
                 .addClass('item')
+                .addClass(data[i].category)
                 .attr("ingredients", data[i].ingredients)
                 .attr("id", data[i].pid)
                 .attr("pid", data[i].pid)
