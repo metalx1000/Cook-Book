@@ -74,7 +74,6 @@
 
 </head>
 <body>
-  <?php include("nav.php");?>
   <div class="container">
     <div id="recipe_create">
   <!--    <h2>Recipe Form</h2>-->
@@ -83,8 +82,8 @@
           <input type="hidden" id="pid" value="098" name="pid">
         </div>
         <div class="form-group">
-          <label for="title">Title:</label>
-          <p type="text" class="text" id="title" name="title" placeholder="Enter Title"></p>
+          <h1 type="text" class="text" id="title" name="title" placeholder="Enter Title"></h1>
+          <hr>
         </div>
         <div class="form-group">
           <label for="prep_time">Prep Time:</label>
@@ -136,7 +135,6 @@
           <p class="text" id="tags" name="tags" placeholder="Enter Some Keywords"></p>
         </div>
 
-        <button type="submit" class="btn btn-default">Submit</button>
 
     </div>
   </div>
