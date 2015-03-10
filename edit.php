@@ -143,6 +143,8 @@
             <option value="dessert">Dessert</option>
             <option value="appetizer">Appetizer</option>
             <option value="snack">Snack</option>
+            <option value="soup">Soup</option>
+            <option value="salad">Salad</option>
             <option value="other">Other</option>
           </select>          
         </div>
