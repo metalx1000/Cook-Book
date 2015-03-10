@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
   <style>
     #alert {
-      top: 0px;
+      top: 50px;
       position: fixed;
       width: 100%;
     }
