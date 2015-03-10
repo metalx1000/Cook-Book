@@ -144,4 +144,11 @@
         <strong>Message:</strong> 
         Entry Has been submitted!
     </div>
+
+  <div id="footer">
+    <pre>
+      Cook Book Software By &#169;Kris Occhipinti. 
+      Licensed under GNU AFFERO GPLv3 http://www.gnu.org/licenses/agpl-3.0.txt
+    </pre>
+  </div>
 </body>
