@@ -26,9 +26,9 @@ if($count > 0){
             }
         }
     }
-    $result = mysqli_query($con,"SELECT * FROM $table WHERE $where_clause ORDER BY pid DESC");
+    $result = mysqli_query($con,"SELECT * FROM $table WHERE $where_clause ORDER BY title DESC");
 }else{
-    $result = mysqli_query($con,"SELECT * FROM $table ORDER BY pid DESC");
+    $result = mysqli_query($con,"SELECT * FROM $table ORDER BY title DESC");
 }
 $rows = array();
 while($row = mysqli_fetch_array($result)) {

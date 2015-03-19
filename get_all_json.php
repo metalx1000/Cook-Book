@@ -1,7 +1,7 @@
 <?php
 include('connect.php');
 include('tables.php');
-$result = mysqli_query($con,"SELECT * FROM $table");
+$result = mysqli_query($con,"SELECT * FROM $table ORDER BY title");
 $rows = array();
 while($row = mysqli_fetch_array($result)) {
     $rows[] = $row;
