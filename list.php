@@ -72,6 +72,7 @@
       var url="get_all_json.php";
       $.getJSON( url, function( data ) {
           for(var i=0;i<data.length;i++){
+            $("#count").html("Currently " + data.length + " Recipes");
             $("#results").append($("<div>")
                 .addClass('item')
                 .addClass(data[i].category)
