@@ -125,6 +125,7 @@
   <div id="main" class="container">
     <div id="header">
     </div>
+    <label id="count"></label>
     <input id="search" type="text" placeholder="Enter Search"/>
     <div id="results"></div>
   </div>
