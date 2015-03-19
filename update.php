@@ -1,6 +1,8 @@
 <?php
 include("connect.php");
 include('tables.php');
+include("backup.php");
+
 $_POST = array_map('strip_tags', $_POST);
 $_POST = array_map('htmlspecialchars', $_POST);
 //date format and time zone
